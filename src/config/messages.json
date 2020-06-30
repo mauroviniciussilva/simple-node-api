@@ -1,0 +1,29 @@
+{
+    "response.json_bad_request": "Bad Request",
+    "response.json_not_found": "Not Found",
+    "response.json_ok": "Successful Request",
+    "response.json_server_error": "Internal Server Error",
+    "response.json_unauthorized": "Unauthorized",
+    
+    "account.signup.email_exists": "E-mail already registered",
+    "account.signup.email.string.base": "Email must be a string",
+    "account.signup.email.string.email": "Email is not valid",
+    "account.signup.email.string.empty": "Email is not allowed to be empty",
+
+    "account.signup.name.any.required": "Name is required",
+    "account.signup.name.string.alphanum": "Name must only contain alpha-numeric characters",
+    "account.signup.name.string.base": "Name must be a string",
+    "account.signup.name.string.empty": "Name is not allowed to be empty",
+
+    "account.signup.password.any.required": "Password is required",
+    "account.signup.password.string.base": "Password must be a string",
+    "account.signup.password.string.empty": "Password is not allowed to be empty",
+    "account.signup.password.string.pattern.base": "Password must contain between 3 and 30 characters and consist of letters or numbers",
+
+    "account.signup.password_confirmation.any.only": "Password confirmation is not the same as password",
+    "account.signup.password_confirmation.any.required": "You need to confirm the password",
+    "account.signup.password_confirmation.string.base": "Password confirmation must be a string",
+    "account.signup.password_confirmation.string.empty": "Password confirmation is not allowed to be empty",
+    
+    "account.signup.success": "Account successfully registered"
+}
