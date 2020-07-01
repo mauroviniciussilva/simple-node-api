@@ -29,7 +29,13 @@ create database <database_name>
 
 *Note: the name I'm using is **simple**, but you can create the database with any name you want, just remember to change it in the **.env** file*
 
-As I am using sequelize, it will not be necessary to create the model tables, they are created automatically (if they do not exist) when you run the project.
+As I am using sequelize, it will not be necessary to create the model tables with T-SQL, they are created automatically (if they do not exist) when you run the project.
+
+To run the migrations, you'll have to run the following command:
+```
+npx sequelize-cli db:migrate 
+```
+*Note: if your database doesn't exist yet, you can just call `db:create` command. With proper access it will create that database for you.*
 
 ## Setup
 
@@ -49,5 +55,6 @@ JWT_REFRESH_TOKEN_PRIVATE_KEY=<refresh_token_private_key>
 ## How to run the application
 
 1. Clone the repository and install the dependencies with `npm install` command;
-2. **Setup** database;
-3. Run the application with `npm start` command.
+2. **Setup** and create database;
+3. Run the application with `npm start` command;
+4. If necessary, run the migrations with `npx sequelize-cli db:migrate` command.
