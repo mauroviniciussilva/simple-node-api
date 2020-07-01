@@ -2,7 +2,13 @@ const;const { verifyJwt } = require("../helpers/jwt");
 const { verifyJwt } = require('../helpers/jwt');
 
 const checkJwt = (req, res, next) => {
-    let token = req.headers['authorization'];
+    const { url: path, headers } = req;
+    
+    const allowAnonymousPaths = [ '/auth/signin', '/auth/signup' ];
+    const isAnonymous = !!allowAnonymousPaths.find(p => p.startsWith(path));
+    if (isAnonymous) return next();
+
+    let token = headers['authorization'];
     token = token ? token.slice(7, token.length) : null;
     if (!token) return res.jsonUnauthorized(null, 'Invalid token');
 
