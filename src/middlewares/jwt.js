@@ -3,7 +3,7 @@ const { verifyJwt, getTokenFromHeaders } = require('../helpers/jwt');
 const checkJwt = (req, res, next) => {
     const { url: path, headers } = req;
     
-    const allowAnonymousPaths = [ '/auth/signin', '/auth/signup', 'auth/refresh' ];
+    const allowAnonymousPaths = [ '/auth/signin', '/auth/signup', '/auth/refresh' ];
     const isAnonymous = !!allowAnonymousPaths.find(p => p.startsWith(path));
     if (isAnonymous) return next();
 

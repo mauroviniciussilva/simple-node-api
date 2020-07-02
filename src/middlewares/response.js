@@ -57,7 +57,6 @@ const jsonServerError = function(data, message, metadata) {
     return this.json({ message, data, metadata, status: status});
 }
 
-
 const response = (req, res, next) => {
     res.jsonOK = jsonOK;
     res.jsonBadRequest = jsonBadRequest;
