@@ -1,6 +1,6 @@
 ## Introduction
 
-This is a simple node API project I'm building to use as a base to other projects.
+This is a simple node API project for a inventory control system. A front-end project was built with React, you can check it out [here](https://github.com/mauroviniciussilva/react-inventory-control).
 
 ## Requirements
 
